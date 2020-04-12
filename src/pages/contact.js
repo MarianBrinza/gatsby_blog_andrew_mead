@@ -11,7 +11,9 @@ const ContactPage = () => {
         <li>Address: somewhere or nowhere</li>
       </ul>
 
-      <p>View this tutorial on <a href="https://www.youtube.com/watch?v=8t0vNu2fCCM&t=1420s" target="_blank">Youtube</a>
+      <p>View this tutorial on
+        <a href="https://www.youtube.com/watch?v=8t0vNu2fCCM&t=1420s" target="_blank" rel="noopener">
+          Youtube</a>
       </p>
     </Layout>
   );
