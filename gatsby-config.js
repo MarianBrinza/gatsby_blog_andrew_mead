@@ -5,7 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata:{
+    title: 'Learning Gatsby with Andrew Mead',
+    author: 'Marian Burtoaca'
+  },
   plugins: [
     // plugin name
     'gatsby-plugin-sass'
