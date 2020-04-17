@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
 import { graphql } from 'gatsby';
+import Head from '../components/head/head';
 
 export const query = graphql`
   query( $slug: String!){
@@ -10,7 +11,7 @@ export const query = graphql`
         eq: $slug
         }
       }
-  ){
+    ){
       frontmatter{
         title
         date
@@ -20,22 +21,19 @@ export const query = graphql`
   }
 `;
 
-
 const Blog = (props) => {
-
+  console.log('props: ', props);
   return (
     <Layout>
+      <Head title={props.data.markdownRemark.frontmatter.title}/>
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
       <p>{props.data.markdownRemark.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={
         {
-          __html: props.data.markdownRemark.html,
+          __html: props.data.markdownRemark.html
         }
       }>
-
       </div>
-
-
     </Layout>
   );
 };

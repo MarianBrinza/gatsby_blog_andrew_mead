@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
+import Head from '../components/head/head';
 
 const ContactPage = () => {
   return (
     <Layout>
+      <Head title='Contact'/>
       <h1>Contact me at the following numbers</h1>
       <ul>
         <li>Phone: 555-555-357</li>
