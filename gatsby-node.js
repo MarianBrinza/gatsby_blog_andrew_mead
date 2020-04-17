@@ -8,7 +8,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
   // get the node with the type of MarkdownRemark
   if (node.internal.type === 'MarkdownRemark') {
 
-    // get the slug
+    // make the slug
     const slug = path.basename(node.fileAbsolutePath, '.md');
 
     // attach the slug to the node
@@ -29,7 +29,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   // 2. get markdown data
   const res = await graphql(`
-  # Write your query or mutation here
   query{
     allMarkdownRemark{
       edges{
