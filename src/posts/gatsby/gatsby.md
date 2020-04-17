@@ -10,3 +10,5 @@ Learning Gatsby - The Great Gatsby Bootcamp by @Andrew Mead
 1. Gatsby
 2. GraphQL
 3. React
+
+![rainbow](rainbow.jpg)
