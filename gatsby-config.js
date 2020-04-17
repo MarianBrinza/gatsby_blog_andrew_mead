@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Learning Gatsby with Andrew Mead',
-    author: 'Marian Burtoaca',
+    author: 'Marian Burtoaca'
   },
   plugins: [
     // plugin name
@@ -22,10 +22,26 @@ module.exports = {
       options: {
         name: 'src',
         // path to where our content is (posts folder in our case)
-        path: `${__dirname}/src/posts/`,
-      },
+        path: `${__dirname}/src/posts/`
+      }
       // this plugin looks for md files and parses them
     },
-    'gatsby-transformer-remark',
-  ],
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal: false
+            }
+          }
+        ]
+      }
+    },
+    'gatsby-plugin-react-helmet'
+  ]
 };
