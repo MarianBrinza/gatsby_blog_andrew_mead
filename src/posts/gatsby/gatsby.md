@@ -11,4 +11,4 @@ Learning Gatsby - The Great Gatsby Bootcamp by @Andrew Mead
 2. GraphQL
 3. React
 
-![rainbow](rainbow.jpg)
+![rainbow](./rainbow.jpg)
