@@ -7,21 +7,21 @@ import Head from '../components/head/head';
 const BlogPage = () => {
 
   const data = useStaticQuery(graphql`
-  query{
-    allMarkdownRemark{
-      edges{
-        node{
-          frontmatter{
-            title
-            date
-          },
-           fields{
-            slug
+      query{
+          allMarkdownRemark{
+              edges{
+                  node{
+                      frontmatter{
+                          title
+                          date
+                      },
+                      fields{
+                          slug
+                      }
+                  }
+              }
           }
-        }
-      }
-    }
-  }`);
+      }`);
 
   const edges = data.allMarkdownRemark.edges;
 

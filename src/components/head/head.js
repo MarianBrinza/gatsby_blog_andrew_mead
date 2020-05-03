@@ -5,13 +5,13 @@ import { graphql, useStaticQuery } from 'gatsby';
 const Head = ({ title }) => {
 
   const data = useStaticQuery(graphql`
-    query{
-      site{
-        siteMetadata{
-          title
-        }
+      query{
+          site{
+              siteMetadata{
+                  title
+              }
+          }
       }
-    }
   `);
 
   return <Helmet
