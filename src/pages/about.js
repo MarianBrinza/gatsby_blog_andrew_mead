@@ -8,7 +8,7 @@ const AboutPage = () => {
     <Layout>
       <Head title='About'/>
       <h1>About page</h1>
-      <p>I am Marian Burtoaca and I love bubulinul!</p>
+      <p>I am Marian Burtoaca and I love Bubulin!</p>
 
       <Link to="contact">Contact me will you ??</Link>
     </Layout>
