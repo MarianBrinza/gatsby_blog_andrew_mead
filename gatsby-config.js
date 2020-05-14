@@ -9,7 +9,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Learning Gatsby with Andrew Mead',
+    title: 'Gatsby Bootcamp with Andrew Mead',
     author: 'Marian Burtoaca'
   },
   plugins: [

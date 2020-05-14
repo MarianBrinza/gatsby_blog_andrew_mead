@@ -1,29 +1,14 @@
 import React from 'react';
 import Layout from '../components/layout/layout';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 import blogStyles from './blog.module.scss';
 import Head from '../components/head/head';
+import GetPostsArray from '../hooks/GetPostsArray';
 
 const BlogPage = () => {
 
-  const data = useStaticQuery(graphql`
-      query{
-          allMarkdownRemark{
-              edges{
-                  node{
-                      frontmatter{
-                          title
-                          date
-                      },
-                      fields{
-                          slug
-                      }
-                  }
-              }
-          }
-      }`);
-
-  const edges = data.allMarkdownRemark.edges;
+  const edges = GetPostsArray();
+  console.log('edges: ', edges);
 
   return (
     <Layout>
